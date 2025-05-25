@@ -64,5 +64,5 @@ jobs:
         # Apply the Kubernetes deployment and service configurations
         # Ensure you replace 'your-dockerhub-username' in deployment.yaml
         # with your actual Docker Hub username before applying.
-        kubectl apply -f kubernetes/deployment.yaml
-        kubectl apply -f kubernetes/service.yaml
+        kubectl apply -f manisfests/deployment.yaml
+        kubectl apply -f manisfests/service.yaml
