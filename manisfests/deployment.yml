@@ -1,0 +1,24 @@
+# kubernetes/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-flask-app
+  labels:
+    app: python-flask-app
+spec:
+  replicas: 2 # You can adjust the number of desired replicas
+  selector:
+    matchLabels:
+      app: python-flask-app
+  template:
+    metadata:
+      labels:
+        app: python-flask-app
+    spec:
+      containers:
+      - name: python-flask-app
+        # Replace with your Docker image name and tag (e.g., your-dockerhub-username/python-flask-app:latest)
+        image: your-dockerhub-username/python-flask-app:latest
+        ports:
+        - containerPort: 5000 # The port your Flask app listens on
+

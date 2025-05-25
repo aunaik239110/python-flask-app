@@ -1,0 +1,18 @@
+# kubernetes/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: python-flask-app-service
+  labels:
+    app: python-flask-app
+spec:
+  selector:
+    app: python-flask-app # Selects pods with the label app: python-flask-app
+  ports:
+    - protocol: TCP
+      port: 80 # The port the service will listen on
+      targetPort: 5000 # The port on the container that the service will forward traffic to
+  type: LoadBalancer # Exposes the service externally using a cloud provider's load balancer
+                     # If you're on a local cluster (e.g., Minikube, Kind), you might use NodePort
+                     # or an Ingress controller for external access.
+
