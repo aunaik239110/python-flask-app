@@ -1,1 +1,0 @@
-Flask==3.0.3 # Or whatever version you are using/want to pin to
