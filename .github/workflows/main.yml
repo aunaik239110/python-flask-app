@@ -17,6 +17,20 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4 # Action to check out your repository code
 
+# --- ADD THESE DEBUGGING STEPS ---
+    - name: List files in root
+      run: |
+        echo "Listing files in repository root (where Docker build context is):"
+        ls -F
+        echo ""
+
+    - name: List files in app directory
+      run: |
+        echo "Listing files in 'app/' directory:"
+        ls -F app/ || echo "Error: 'app/' directory not found or empty."
+        echo ""
+    # --- END DEBUGGING STEPS ---
+
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3 # Action to set up Docker Buildx for multi-platform builds
 
