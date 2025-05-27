@@ -11,7 +11,7 @@ def hello_kubernetes():
     """
     Returns a simple greeting message.
     """
-    return "Hello, Kubernetes! This is a simple Python app. From Akash"
+    return "Hello, Kubernetes! This is a simple Python app From Akash"
 # Run the application if this script is executed directly
 if __name__ == '__main__':
     # Listen on all available network interfaces (0.0.0.0) and port 5000
