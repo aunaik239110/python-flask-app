@@ -18,7 +18,7 @@ spec:
       containers:
       - name: python-flask-app
         # Replace with your Docker image name and tag (e.g., your-dockerhub-username/python-flask-app:latest)
-        image: your-dockerhub-username/python-flask-app:latest
+        image: aunaik2391/python-flask-app:latest
         ports:
         - containerPort: 5000 # The port your Flask app listens on
       imagePullSecrets:
